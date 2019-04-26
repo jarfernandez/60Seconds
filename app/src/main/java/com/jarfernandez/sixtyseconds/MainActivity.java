@@ -3,6 +3,7 @@ package com.jarfernandez.sixtyseconds;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,10 +16,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (getSupportActionBar() != null)
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
+        if (getActionBar() != null) {
+            getActionBar().hide();
+        }
+
+        if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
+        }
 
         secondsTextView = findViewById(R.id.secondsTextView);
+        secondsTextView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
         CountDownTimer countDownTimer = new CountDownTimer(864000000, 1000) {
 
