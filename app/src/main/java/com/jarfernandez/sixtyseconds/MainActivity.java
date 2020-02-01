@@ -2,9 +2,10 @@ package com.jarfernandez.sixtyseconds;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                MainActivity.this.recreate();
             }
         };
 
