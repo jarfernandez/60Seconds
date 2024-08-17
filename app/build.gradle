@@ -6,8 +6,8 @@ android {
         applicationId "com.jarfernandez.sixtyseconds"
         minSdk 23
         targetSdk 34
-        versionCode 10
-        versionName "2.0.6-beta.1"
+        versionCode 11
+        versionName "2.0.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
